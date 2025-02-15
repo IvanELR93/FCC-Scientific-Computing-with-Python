@@ -1,8 +1,8 @@
 
-text = 'Hello Zaira'
+message = 'Hello Zaira'
 shift = 3
 
-def caesar():
+def caesar(text):
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
     encrypted_text = ''
 
@@ -16,7 +16,4 @@ def caesar():
     print('plain text:', text)
     print('encrypted text:', encrypted_text)
 
-try:
-    print(alphabet) # type: ignore
-except NameError:
-   print("Cannot access a local variable from a function")
+caesar(message)

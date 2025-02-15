@@ -16,7 +16,4 @@ def caesar():
     print('plain text:', text)
     print('encrypted text:', encrypted_text)
 
-try:
-    print(alphabet) # type: ignore
-except NameError:
-   print("Cannot access a local variable from a function")
+caesar()

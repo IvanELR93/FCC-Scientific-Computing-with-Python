@@ -1,22 +1,17 @@
-
 text = 'Hello Zaira'
 shift = 3
-
-def caesar():
+def caesar(message, offset):
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
     encrypted_text = ''
 
-    for char in text.lower():
+    for char in message.lower():
         if char == ' ':
             encrypted_text += char
         else:
             index = alphabet.find(char)
-            new_index = (index + shift) % len(alphabet)
+            new_index = (index + offset) % len(alphabet)
             encrypted_text += alphabet[new_index]
-    print('plain text:', text)
+    print('plain text:', message)
     print('encrypted text:', encrypted_text)
 
-try:
-    print(alphabet) # type: ignore
-except NameError:
-   print("Cannot access a local variable from a function")
+caesar()
